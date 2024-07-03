@@ -1,0 +1,286 @@
+
+schema : User
+
+attributes : username, password, email
+
+
+1) API for creating a new user account
+
+    url : http://127.0.0.1:8000/api/register/
+
+    method : post
+
+    body : {username,password,email}
+
+    authentication : nil
+
+    status : completed
+
+
+2) API for fetching token
+
+    url : http://127.0.0.1:8000/api/token/
+
+    method : post
+
+    body : {username,password}
+
+    authentication : nil
+
+    status : completed
+
+
+====================================================end auth====================================================
+
+
+schema : Expense
+
+attributes : title, amount, category, priority, owner
+
+
+1) API for listing all expenses
+
+    url : http://127.0.0.1:8000/api/expenses/
+
+    method : get
+
+    body : nil
+
+    authentication : token
+
+    status : completed
+
+
+2) API for adding expenses
+
+    url : http://127.0.0.1:8000/api/expenses/
+
+    method : post
+
+    body : {title,amount,category,priority}
+
+    authentication : token
+
+    status : completed
+
+
+3) API for updating expenses
+
+    url : http://127.0.0.1:8000/api/expenses/{id}
+
+    method : put
+
+    body : {title,amount,category,priority}
+
+    authentication : token
+
+    status : completed
+
+
+4) API for expense detail
+
+    url : http://127.0.0.1:8000/api/expenses/{id}
+
+    method : get
+
+    body : nil
+
+    authentication : token
+
+    status : completed
+
+
+5) API for adding expenses
+
+    url : http://127.0.0.1:8000/api/expenses/{id}
+
+    method : delete
+
+    body : nil
+
+    authentication : token
+
+    status : completed
+
+
+====================================================end expense====================================================
+
+
+schema : Income
+
+attributes : title, amount, category, owner
+
+
+1) API for listing all Incomes
+
+    url : http://127.0.0.1:8000/api/incomes/
+
+    method : get
+
+    body : nil
+
+    authentication : token
+
+    status : completed
+
+
+2) API for adding incomes
+
+    url : http://127.0.0.1:8000/api/incomes/
+
+    method : post
+
+    body : {title,amount,category}
+
+    authentication : token
+
+    status : completed
+
+
+3) API for updating incomes
+
+    url : http://127.0.0.1:8000/api/incomes/{id}
+
+    method : put
+
+    body : {title,amount,category}
+
+    authentication : token
+
+    status : completed
+
+
+4) API for income detail
+
+    url : http://127.0.0.1:8000/api/incomes/{id}
+
+    method : get
+
+    body : nil
+
+    authentication : token
+
+    status : completed
+
+
+5) API for deleting incomes
+
+    url : http://127.0.0.1:8000/api/incomes/{id}
+
+    method : delete
+
+    body : nil
+
+    authentication : token
+
+    status : completed
+
+
+====================================================end expense====================================================
+
+
+schema : Expense summary
+
+attributes : month, year, category, priority
+
+
+1) API for fetch expense summary in a month
+
+    url : http://127.0.0.1:8000/api/expenses/summary/?month=05
+
+    method : get
+
+    body : month
+
+    authentication : token
+
+    status : completed
+
+
+2) API for fetch expense summary in a year
+
+    url : http://127.0.0.1:8000/api/expenses/summary/?year=2024
+
+    method : get
+
+    body : year
+
+    authentication : token
+
+    status : completed
+
+
+3) API for fetch expense summary of a category
+
+    url : http://127.0.0.1:8000/api/expenses/summary/?category=Housing
+
+    method : get
+
+    body : category
+
+    authentication : token
+
+    status : completed
+
+
+4) API for fetch expense summary of a priority
+
+    url : http://127.0.0.1:8000/api/expenses/summary/?priority=Need
+
+    method : get
+
+    body : priority
+
+    authentication : token
+
+    status : completed
+
+
+====================================================end expense summary====================================================
+
+
+schema : Income summary
+
+attributes : month, year, category
+
+
+1) API for fetch income summary in a month
+
+    url : http://127.0.0.1:8000/api/incomes/summary/?month=05
+
+    method : get
+
+    body : month
+
+    authentication : token
+
+    status : completed
+
+
+2) API for fetch income summary in a year
+
+    url : http://127.0.0.1:8000/api/incomes/summary/?year=2024
+
+    method : get
+
+    body : year
+
+    authentication : token
+
+    status : completed
+
+
+3) API for fetch income summary of a category
+
+    url : http://127.0.0.1:8000/api/Incomes/summary/?category=Housing
+
+    method : get
+
+    body : category
+
+    authentication : token
+
+    status : completed
+
+
+====================================================end expense summary====================================================
